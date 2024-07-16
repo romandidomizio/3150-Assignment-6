@@ -1,37 +1,47 @@
 @charset "UTF-8";
 
 /* form styling */
+
 #wrapper {
   width: 60%;
   margin-left: 4%;
 }
 
 div#formcol1 {
-  float: left;  
-  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-label {
+/* Style for right-aligning labels in Speaker Info */
+#formcol1 label {
+  text-align: right;
   margin-right: .3em;
-  width: 8em;  /* Adjust width to align labels */
+  width: 6.3em; /* Adjust width as needed */
   display: inline-block;
-  text-align: left; /* Left-align labels */
 }
 
-#formcol1 li {
-  list-style: none;
-  margin-bottom: 1em; /* Add space between fields */
+/* Left-align Type of Presentation */
+#multchoice legend {
+  text-align: left;
 }
 
-input[type="text"] {
-  width: 60%; /* Adjust input width for better alignment */
+/* Remove bullets from list items */
+#proposal2020 ul {
+  list-style-type: none;
+  padding: 0;
 }
 
+#proposal2020 ul li {
+  list-style-type: none;
+}
+
+/* Highlighting current focus */
 select:focus, select:active, input:focus, input:active, input:focus + label, input:active + label, label[for]:focus, label[for]:active {
   color: #FFF !important;
-  background-color: #BB3D2F !important; /* Ensure high contrast color */
+  background-color: #BB3D2F !important;
 }
 
+/* Styling for required fields */
 #formcol1 input.reqfield {
   background: #FF9;
 }
